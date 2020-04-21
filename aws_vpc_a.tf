@@ -1,14 +1,14 @@
 resource "aws_vpc" "a" {
   cidr_block = "10.0.0.0/16"
   tags = {
-    name = "network-a"
+    network = "a"
   }
 }
 
 resource "aws_route_table" "a" {
   vpc_id = aws_vpc.a.id
   tags = {
-    name = "network-a"
+    network = "a"
   }
 }
 
